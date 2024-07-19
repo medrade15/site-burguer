@@ -13,7 +13,51 @@ const lanches = [
         descricao: 'Um hambúrguer tradicional de 200g com alface, tomate, queijo cheddar e molho barbecue.',
         imagem: 'https://static.itdg.com.br/images/auto-auto/14cca074c0f16f3e840e06f2b7fbdd66/shutterstock-614932352.jpg'
     },
+
+     { 
+        id: 2,
+        nome: 'Classic American Burger', 
+        preco: 19.90, 
+        descricao: 'Um hambúrguer tradicional de 200g com alface, tomate, queijo cheddar e molho barbecue.',
+        imagem: 'https://static.itdg.com.br/images/auto-auto/14cca074c0f16f3e840e06f2b7fbdd66/shutterstock-614932352.jpg'
+    },
     { 
+        id: 2,
+        nome: 'Classic American Burger', 
+        preco: 19.90, 
+        descricao: 'Um hambúrguer tradicional de 200g com alface, tomate, queijo cheddar e molho barbecue.',
+        imagem: 'https://static.itdg.com.br/images/auto-auto/14cca074c0f16f3e840e06f2b7fbdd66/shutterstock-614932352.jpg'
+    },
+    { 
+        id: 2,
+        nome: 'Classic American Burger', 
+        preco: 19.90, 
+        descricao: 'Um hambúrguer tradicional de 200g com alface, tomate, queijo cheddar e molho barbecue.',
+        imagem: 'https://static.itdg.com.br/images/auto-auto/14cca074c0f16f3e840e06f2b7fbdd66/shutterstock-614932352.jpg'
+    },
+    { 
+        id: 3,
+        nome: 'Bacon Delight', 
+        preco: 21.50, 
+        descricao: 'Hambúrguer suculento coberto com fatias generosas de bacon crocante e queijo derretido.',
+        imagem: 'https://s2-casavogue.glbimg.com/GRF9KCq-1hiz5uSs-xX9Go_KqIc=/0x0:2048x1365/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_d72fd4bf0af74c0c89d27a5a226dbbf8/internal_photos/bs/2022/p/X/eb4KQdToys327cGqnRGg/receita-ceboloni-bacon.jpg'
+    },
+
+     { 
+        id: 3,
+        nome: 'Bacon Delight', 
+        preco: 21.50, 
+        descricao: 'Hambúrguer suculento coberto com fatias generosas de bacon crocante e queijo derretido.',
+        imagem: 'https://s2-casavogue.glbimg.com/GRF9KCq-1hiz5uSs-xX9Go_KqIc=/0x0:2048x1365/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_d72fd4bf0af74c0c89d27a5a226dbbf8/internal_photos/bs/2022/p/X/eb4KQdToys327cGqnRGg/receita-ceboloni-bacon.jpg'
+    }, { 
+        id: 3,
+        nome: 'Bacon Delight', 
+        preco: 21.50, 
+        descricao: 'Hambúrguer suculento coberto com fatias generosas de bacon crocante e queijo derretido.',
+        imagem: 'https://s2-casavogue.glbimg.com/GRF9KCq-1hiz5uSs-xX9Go_KqIc=/0x0:2048x1365/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_d72fd4bf0af74c0c89d27a5a226dbbf8/internal_photos/bs/2022/p/X/eb4KQdToys327cGqnRGg/receita-ceboloni-bacon.jpg'
+    },
+
+ { 
         id: 3,
         nome: 'Bacon Delight', 
         preco: 21.50, 
@@ -25,7 +69,7 @@ const lanches = [
         nome: 'Veggie Supreme', 
         preco: 18.90, 
         descricao: 'Hambúrguer vegetariano com patty de grão-de-bico, abobrinha grelhada, queijo de cabra e molho pesto',
-        imagem: 'https://guiadacozinha.com.br/wp-content/uploads/2020/03/hamburguer-de-quinoa-vegetariano.jpg'
+        imagem: 'imagens/buguer.jpg'
     }
 ];
 
@@ -197,7 +241,7 @@ ${formaPagamento.value}
 Agradecemos pela sua preferência!`
     );
 
-    const numeroWhatsApp = '5561996125274'; 
+    const numeroWhatsApp = '556196125274'; 
 
     window.open(`https://wa.me/${numeroWhatsApp}?text=${mensagem}`);
 
