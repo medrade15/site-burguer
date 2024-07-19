@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>King Burger - A melhor hamburgueria do Rio de Janeiro</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>King Burger</h1>
+    </header>
+    <div class="container">
+        <main>
+            <section id="menu">
+                <h2>Nosso Cardápio</h2>
+                <div id="lanche-lista">
+                    
+                </div>
+            </section>
+        </main>
+        <aside>
+            <section id="pedido">
+                <h2>Seu Pedido</h2>
+                <ul id="pedido-lista"></ul>
+                <p>Subtotal: R$ <span id="subtotal">0.00</span></p>
+                <p>Taxa de entrega: R$ 5.00</p>
+                <p>Total: R$ <span id="total">0.00</span></p>
+                <button id="finalizar-pedido">Finalizar Pedido</button>
+            </section>
+        </aside>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h2>Confirmar Pedido</h2>
+            <div id="modal-pedido-lista"></div>
+            <p>Subtotal: R$ <span id="modal-subtotal">0.00</span></p>
+            <p>Taxa de entrega: R$ 5.00</p>
+            <p>Total: R$ <span id="modal-total">0.00</span></p>
+    
+            <label for="endereco">Endereço de Entrega:</label>
+            <input type="text" id="endereco" class="modal-input">
+    
+            <label>Forma de Pagamento:</label>
+            <div class="modal-radio-group">
+                <label>
+                    <input type="radio" name="forma-pagamento" value="Dinheiro" checked>
+                    Dinheiro
+                </label>
+                <label>
+                    <input type="radio" name="forma-pagamento" value="Cartão de Crédito">
+                    Cartão de Crédito
+                </label>
+                <label>
+                    <input type="radio" name="forma-pagamento" value="Cartão de Débito">
+                    Cartão de Débito
+                </label>
+            </div>
+    
+            <button id="confirmar-pedido" class="modal-button">Confirmar e Enviar</button>
+            <button id="cancelar-pedido" class="modal-button">Cancelar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

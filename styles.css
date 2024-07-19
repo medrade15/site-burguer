@@ -1,0 +1,297 @@
+:root {
+    --primary-color: #ff6b6b;
+    --secondary-color: #ff5252;
+    --bg-color: #f9f9f9;
+    --text-color: #333;
+    --light-text-color: #666;
+    --button-radius: 25px;
+    --shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #e4d4d4b6;
+    color: var(--text-color);
+    background-image: url("https://img.freepik.com/fotos-gratis/saboroso-hamburguer-de-carne-com-queijo-e-salada-de-frente-no-fundo-escuro_140725-89595.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+main {
+    flex: 3;
+    margin-right: 2rem;
+}
+
+aside {
+    flex: 1;
+}
+
+#menu, #pedido {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    padding: 20px;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+#lanche-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.lanche-item {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.lanche-item:hover {
+    transform: translateY(-5px);
+}
+
+.lanche-imagem {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.lanche-info {
+    padding: 1rem;
+}
+
+.lanche-nome {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.lanche-descricao {
+    font-size: 0.9rem;
+    color: var(--light-text-color);
+    margin-bottom: 1rem;
+}
+
+.lanche-obs {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+button {
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: var(--button-radius);
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgb(11, 124, 11);
+}
+
+button:active {
+    background-color: #8f8f00; 
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.5); 
+}
+
+#pedido-lista {
+    list-style-type: none;
+    margin-bottom: 1rem;
+    padding: 0;
+}
+
+#pedido-lista li {
+    background-color: white;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+}
+
+.pedido-item-obs {
+    font-size: 0.8rem;
+    color: var(--light-text-color);
+    font-style: italic;
+    margin-top: 0.3rem;
+}
+
+#finalizar-pedido {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    margin-top: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--button-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#finalizar-pedido:hover {
+    background-color: rgb(11, 124, 11);
+}
+
+#finalizar-pedido:active {
+    background-color: #8f8f00; 
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.5); 
+}
+
+.pedido-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.remover-item {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.remover-item:hover {
+    background-color: #ff3333;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#endereco {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 1rem 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.modal-radio-group {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+}
+
+.modal-radio-group label {
+    margin-bottom: 0.5rem;
+}
+
+.modal-button {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#confirmar-pedido {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#cancelar-pedido {
+    background-color: #f44336;
+    color: white;
+}
+
+#confirmar-pedido:hover {
+    background-color: #45a049;
+}
+
+#cancelar-pedido:hover {
+    background-color: #e41f1f;
+}
+
+#modal-pedido-lista {
+    margin-bottom: 1rem;
+}
+
+#confirmar-pedido, #cancelar-pedido {
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    main, aside {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    #menu, #pedido {
+        margin-bottom: 1rem;
+    }
+}
