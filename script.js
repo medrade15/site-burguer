@@ -222,7 +222,7 @@ confirmarPedidoBtn.addEventListener('click', () => {
     const total = subtotal + TAXA_ENTREGA;
 
     const mensagem = encodeURIComponent(
-`Novo Pedido - Medrade Burger
+`Novo Pedido - Medrade  Burger
 Data e Hora: ${dataHora}
 
 Itens do Pedido:
